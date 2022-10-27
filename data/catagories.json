@@ -1,26 +1,26 @@
 [
-    {
-        "id": "01",
-        "name": "Bangla"
-    },
-    {
-        "id": "02",
-        "name": "English"
-    },
-    {
-        "id": "03",
-        "name": "MathMatice"
-    },
-    {
-        "id": "04",
-        "name": "Biology"
-    },
-    {
-        "id": "05",
-        "name": "Physics"
-    },
-    {
-        "id": "06",
-        "name": "Chemistry"
-    }
+  {
+    "id": "01",
+    "name": "Web Design"
+  },
+  {
+    "id": "02",
+    "name": "Web Development"
+  },
+  {
+    "id": "03",
+    "name": "Wordpress Developer"
+  },
+  {
+    "id": "04",
+    "name": "Graphic Design"
+  },
+  {
+    "id": "05",
+    "name": "Vide Editing"
+  },
+  {
+    "id": "06",
+    "name": "Blog Writer"
+  }
 ]

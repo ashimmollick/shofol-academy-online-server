@@ -4,29 +4,34 @@ var cors = require('cors')
 const port = process.env.PORT || 5000;
 app.use(cors())
 
-const educations = require('./data/catagories.json')
-const eduDescription = require('./data/education-description.json')
+const catagories = require('./data/Catagories.json');
+const news = require('./data/news.json')
 app.get('/', (req, res) => {
-    res.send('Class API Runnign')
+    res.send('News API Runnign')
 });
-app.get('/educations', (req, res) => {
-    res.send(educations)
+app.get('/news', (req, res) => {
+    res.send(news)
 });
-app.get('/eduDescription', (req, res) => {
-    res.send(eduDescription)
+app.get('/news-catagories', (req, res) => {
+    res.send(catagories)
 });
-app.get('/eduDescription/:id', (req, res) => {
-    const id = parseInt(req.params.id);
-    const select_News = eduDescription.find(n => n.id === id);
-    res.send(select_News)
-
+app.get('/catagory/:id', (req, res) => {
+    const id = req.params.id;
+    if (id === '08') {
+        res.send(news)
+    }
+    else {
+        const select_News = news.filter(n => n.category_id === id);
+        res.send(select_News)
+    }
 
 });
+app.get('/news/:id', (req, res) => {
+    const id = req.params.id;
+    const selectNews = news.find(n => n._id === id);
+    res.send(selectNews)
 
-
-
-
-
+});
 app.listen(port, () => {
-    console.log('News Api', port)
+    console.log('Dragon News', port)
 })
